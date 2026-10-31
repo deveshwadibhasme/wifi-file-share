@@ -12,8 +12,8 @@ ${pkg.name} v${pkg.version}
 ${pkg.description}
 
 Usage:
-  wifi-file-server <folder-path> [options]
-  npx wifi-file-server <folder-path> [options]
+  wifi-file-share <folder-path> [options]
+  npx wifi-file-share <folder-path> [options]
 
 Options:
   -p, --port <number>   Port to listen on (default: 3000, or PORT env)
@@ -21,9 +21,9 @@ Options:
   -v, --version         Show version number
 
 Examples:
-  wifi-file-server ./Videos
-  wifi-file-server ./Documents --port 8080
-  npx wifi-file-server . -p 4000
+  wifi-file-share ./Videos
+  wifi-file-share ./Documents --port 8080
+  npx wifi-file-share . -p 4000
 `);
   process.exit(0);
 }
@@ -51,9 +51,9 @@ for (let i = 0; i < args.length; i++) {
 }
 
 if (!folderArg) {
-  console.error(`\nUsage: wifi-file-server <folder-path> [options]`);
-  console.error(`Example: wifi-file-server ./Videos`);
-  console.error(`Run "wifi-file-server --help" for all options.\n`);
+  console.error(`\nUsage: wifi-file-share <folder-path> [options]`);
+  console.error(`Example: wifi-file-share ./Videos`);
+  console.error(`Run "wifi-file-share --help" for all options.\n`);
   process.exit(1);
 }
 

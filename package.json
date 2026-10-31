@@ -1,11 +1,12 @@
 {
-  "name": "wifi-file-server",
+  "name": "wifi-file-share",
   "version": "2.0.0",
   "description": "Share local folders over Wi-Fi and download files from your phone",
   "main": "lib/server.js",
   "author": "deveshwadibhasme",
   "license": "MIT",
   "bin": {
+    "wifi-file-share": "bin/cli.js",
     "wifi-file-server": "bin/cli.js"
   },
   "files": [
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/deveshwadibhasme/wifi-file-server#readme",
   "keywords": [
     "wifi",
+    "file-share",
     "file-server",
     "local-network",
     "file-sharing",

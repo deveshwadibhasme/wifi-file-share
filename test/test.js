@@ -6,7 +6,7 @@ const http = require("node:http");
 const vm = require("node:vm");
 
 async function runTests() {
-  console.log("Starting wifi-file-server verification tests...");
+  console.log("Starting wifi-file-share verification tests...");
 
   // Setup temp directory
   const testDir = path.resolve(__dirname, "temp-shared");
@@ -15,7 +15,7 @@ async function runTests() {
   }
   fs.mkdirSync(testDir, { recursive: true });
 
-  const testContent = "Hello World from Wi-Fi File Server!";
+  const testContent = "Hello World from Wi-Fi File Share!";
   const testFile = path.join(testDir, "hello.txt");
   fs.writeFileSync(testFile, testContent, "utf8");
 
@@ -38,7 +38,7 @@ async function runTests() {
     const indexRes = await fetch(`${baseUrl}/`);
     assert.strictEqual(indexRes.status, 200);
     const indexHtml = await indexRes.text();
-    assert.ok(indexHtml.includes("Wi-Fi File Server"), "Index HTML missing title");
+    assert.ok(indexHtml.includes("Wi-Fi File Share"), "Index HTML missing title");
 
     // Test 1b: Verify client-side script syntax
     console.log("Test 1b: Client-side JavaScript syntax verification...");

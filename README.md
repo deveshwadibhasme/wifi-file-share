@@ -1,4 +1,4 @@
-# Wi-Fi File Server
+# Wi-Fi File Share
 
 Share a local folder over your Wi-Fi network and browse or download files from another device using a web browser.
 
@@ -13,14 +13,14 @@ Share a local folder over your Wi-Fi network and browse or download files from a
 Run instantly with `npx` (no installation required):
 
 ```bash
-npx wifi-file-server ./Videos
+npx wifi-file-share ./Videos
 ```
 
 Or install globally:
 
 ```bash
-npm install -g wifi-file-server
-wifi-file-server ./Videos
+npm install -g wifi-file-share
+wifi-file-share ./Videos
 ```
 
 Then open the phone URL printed in your terminal on your mobile browser (e.g. `http://192.168.1.5:3000`).
@@ -28,7 +28,7 @@ Then open the phone URL printed in your terminal on your mobile browser (e.g. `h
 ## CLI Options
 
 ```bash
-wifi-file-server <folder-path> [options]
+wifi-file-share <folder-path> [options]
 ```
 
 | Option | Description |
@@ -41,13 +41,13 @@ wifi-file-server <folder-path> [options]
 
 ```bash
 # Share current directory on default port 3000
-npx wifi-file-server .
+npx wifi-file-share .
 
 # Share specific folder on custom port
-wifi-file-server ./Documents --port 8080
+wifi-file-share ./Documents --port 8080
 
 # Share with short flag
-wifi-file-server ./Videos -p 4000
+wifi-file-share ./Videos -p 4000
 ```
 
 ## Features
