@@ -1,29 +1,39 @@
 {
   "name": "wifi-file-server",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Share local folders over Wi-Fi and download files from your phone",
-  "main": "server.js",
+  "main": "lib/server.js",
   "author": "deveshwadibhasme",
+  "license": "MIT",
   "bin": {
-    "wifi-file-server": "./bin/cli.js"
+    "wifi-file-server": "bin/cli.js"
   },
   "files": [
-    "server.js",
+    "bin",
+    "lib",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "start": "node ./lib/server.js",
-    "test": "node --check ./lib/server.js"
+    "start": "node bin/cli.js",
+    "test": "node --check bin/cli.js && node --check lib/server.js && node test/test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deveshwadibhasme/wifi-file-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deveshwadibhasme/wifi-file-server/issues"
+  },
+  "homepage": "https://github.com/deveshwadibhasme/wifi-file-server#readme",
   "keywords": [
     "wifi",
     "file-server",
     "local-network",
     "file-sharing",
-    "express"
+    "express",
+    "cli"
   ],
-  "license": "MIT",
   "engines": {
     "node": ">=20"
   },

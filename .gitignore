@@ -4,3 +4,6 @@ shared/
 *.zip
 *.7z
 *.rar
+*.tgz
+.DS_Store
+Thumbs.db
